@@ -123,6 +123,13 @@ label.lv-pill.on{border-color:var(--blue);background:var(--blue-light);color:var
 .lv-scale label.lv-pill{flex-direction:column;align-items:center;gap:4px;padding:8px 2px;font-size:1rem;text-align:center}
 .lv-scale label.lv-pill input{width:16px;height:16px}
 .scale-labels{display:flex;justify-content:space-between;gap:10px;max-width:640px;font-size:.82rem;color:var(--muted);margin-top:5px}
+.diag{margin-top:8px;font-size:.85rem;color:var(--muted)}
+.diag summary{cursor:pointer;font-weight:700}
+.diag p{margin-top:6px;line-height:1.5}
+.other-box{margin-top:9px}
+.other-box label{display:block;font-size:.92rem!important;font-weight:700;color:var(--blue-dark);margin-bottom:5px;text-transform:none;letter-spacing:0}
+.other-box .small{font-weight:400}
+.other-box input{background:#fff}
 .good-q{background:#f2fbf8;border:1.5px solid #bfe6dc;border-radius:14px;padding:14px 14px 12px}
 .good-q .field-label::before{content:'⭐ '}
 .top-bar-row3{display:flex;justify-content:space-between;align-items:center;gap:10px;min-height:20px;margin-top:2px}
@@ -369,10 +376,11 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
 <div class="step" id="step-5">
   <div class="card">
 <div class="part-chip"><span>Part 2 of 6</span> Talking, Listening and Friends</div>
-    <div class="sec-header"><span class="sec-emoji">&#128483;&#65039;</span><div class="sec-heading"><h2>Speaking and Listening</h2><p>Tap the number that best describes how often each thing happens to you.</p></div></div>
+    <div class="sec-header"><span class="sec-emoji">&#128483;&#65039;</span><div class="sec-heading"><h2>Speaking and Listening</h2><p>First tick what goes well for you, then answer the questions below.</p></div></div>
 <div class="field good-q"><div class="field-label">First, what are you good at when talking with others?</div><div class="lv-grid" data-check="talkGood"></div></div>
 <div class="divider"></div>
-    <div id="speaking-qs"></div>
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+<div id="speaking-qs"></div>
     <div class="divider"></div>
 <div class="field"><div class="field-label">What helps you understand and remember?</div><div class="lv-grid" data-check="instructionsHelp"></div></div>
 <div class="btn-row"><button class="btn btn-back" onclick="goTo(4)">&#8592; Back</button><button class="btn btn-next" onclick="saveAndNext(5)">Next &#8594;</button></div>
@@ -382,10 +390,11 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
 <div class="step" id="step-6">
   <div class="card">
 <div class="part-chip"><span>Part 2 of 6</span> Talking, Listening and Friends</div>
-    <div class="sec-header"><span class="sec-emoji">&#129309;</span><div class="sec-heading"><h2>Friendships, Communication and Change</h2><p>Tap the number that best describes how often each thing happens to you.</p></div></div>
+    <div class="sec-header"><span class="sec-emoji">&#129309;</span><div class="sec-heading"><h2>Friendships, Communication and Change</h2><p>First tick what goes well for you, then answer the questions below.</p></div></div>
 <div class="field good-q"><div class="field-label">What goes well for you with friends and other people?</div><div class="lv-grid" data-check="friendsGood"></div></div>
 <div class="divider"></div>
-    <div id="comm-qs"></div>
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+<div id="comm-qs"></div>
     <div class="divider"></div>
 <div class="field"><div class="field-label">Which of these sound like you with other people?</div><div class="lv-grid" data-check="socialComm"></div></div>
 <div class="field"><div class="field-label">What about routines and change?</div><div class="lv-grid" data-check="flexibility"></div></div>
@@ -397,10 +406,11 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
 <div class="step" id="step-7">
   <div class="card">
 <div class="part-chip"><span>Part 3 of 6</span> Learning</div>
-    <div class="sec-header"><span class="sec-emoji">&#128218;</span><div class="sec-heading"><h2>Reading</h2><p>Tap the number that best describes how often each thing happens to you.</p></div></div>
+    <div class="sec-header"><span class="sec-emoji">&#128218;</span><div class="sec-heading"><h2>Reading</h2><p>First tick what goes well for you, then answer the questions below.</p></div></div>
 <div class="field good-q"><div class="field-label">First, what goes well with reading?</div><div class="lv-grid" data-check="readingGood"></div></div>
 <div class="divider"></div>
-    <div id="reading-qs"></div>
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+<div id="reading-qs"></div>
     <div class="divider"></div>
 <div class="field"><div class="field-label">Are any of these hard for you too?</div><div class="lv-grid" data-check="readingHard"></div></div>
 <div class="btn-row"><button class="btn btn-back" onclick="goTo(6)">&#8592; Back</button><button class="btn btn-next" onclick="saveAndNext(7)">Next &#8594;</button></div>
@@ -410,10 +420,11 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
 <div class="step" id="step-8">
   <div class="card">
 <div class="part-chip"><span>Part 3 of 6</span> Learning</div>
-    <div class="sec-header"><span class="sec-emoji">&#9999;&#65039;</span><div class="sec-heading"><h2>Writing and Spelling</h2><p>Tap the number that best describes how often each thing happens to you.</p></div></div>
+    <div class="sec-header"><span class="sec-emoji">&#9999;&#65039;</span><div class="sec-heading"><h2>Writing and Spelling</h2><p>First tick what goes well for you, then answer the questions below.</p></div></div>
 <div class="field good-q"><div class="field-label">First, what goes well with writing?</div><div class="lv-grid" data-check="writingGood"></div></div>
 <div class="divider"></div>
-    <div id="writing-qs"></div>
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+<div id="writing-qs"></div>
     <div class="divider"></div>
 <div class="field"><div class="field-label">Which parts of writing things down are hard?</div><div class="lv-grid" data-check="writingHard"></div></div>
 <div class="field"><div class="field-label">Which of these would help you show what you know?</div><div class="lv-grid" data-check="recordingHelp"></div></div>
@@ -436,10 +447,11 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
 <div class="step" id="step-10">
   <div class="card">
 <div class="part-chip"><span>Part 3 of 6</span> Learning</div>
-    <div class="sec-header"><span class="sec-emoji">&#129504;</span><div class="sec-heading"><h2>Thinking and Learning</h2><p>Tap the number that best describes how often each thing happens to you.</p></div></div>
+    <div class="sec-header"><span class="sec-emoji">&#129504;</span><div class="sec-heading"><h2>Thinking and Learning</h2><p>First tick what goes well for you, then answer the questions below.</p></div></div>
 <div class="field good-q"><div class="field-label">First, what are you good at when you are learning?</div><div class="lv-grid" data-check="learnGood"></div></div>
 <div class="divider"></div>
-    <div id="thinking-qs"></div>
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+<div id="thinking-qs"></div>
     <div class="btn-row"><button class="btn btn-back" onclick="goTo(9)">&#8592; Back</button><button class="btn btn-next" onclick="saveAndNext(10)">Next &#8594;</button></div>
   </div>
 </div>
@@ -526,7 +538,8 @@ input[type="text"],input[type="date"],input[type="number"],textarea{font-size:1.
     <div class="sec-header"><span class="sec-emoji">&#128064;</span><div class="sec-heading"><h2>My Senses, Body and Independence</h2><p>Questions about your eyes, your senses and doing things for yourself.</p></div></div>
 <div class="field good-q"><div class="field-label">First, what can you do well by yourself?</div><div class="lv-grid" data-check="independentGood"></div></div>
 <div class="divider"></div>
-            <div class="field">
+    <div class="field-label" style="margin-top:4px">How often does each of these happen to you?</div><p class="small" style="margin:-2px 0 8px">Tap a number for each sentence: 0 = not at all, 1 = just a little, 2 = often, 3 = very often.</p>
+        <div class="field">
       <div class="field-label">Do you wear glasses?</div>
       <div class="radio-group">
         <label class="radio-pill" onclick="pickRadio(this,'glasses','No')"><input type="radio" name="glasses" value="No">No</label>
@@ -1131,6 +1144,11 @@ checkboxOptions.sadTriggers = ["Falling out with friends", "Being left out", "Mi
 checkboxOptions.scaredTriggers = ["Tests or being put on the spot", "New places or people", "Changes to plans", "Something bad happening", "Being away from home", "Getting into trouble", "Loud or busy places", "Nothing much", "I'm not sure"];
 checkboxOptions.copingDo = ["Take deep breaths", "Go somewhere quiet", "Talk to someone I trust", "Listen to music", "Move or exercise", "Squeeze or fidget with something", "Count or distract myself", "Use a time-out or calm card", "Shout or lash out", "Hide or run away", "Keep it all inside", "Cry", "I don't know what to do"];
 checkboxOptions.feelingHelpers = ["Someone at home", "A teacher", "A teaching assistant", "A friend", "A pastoral or wellbeing adult", "A pet", "Nobody really", "I'm not sure"];
+var _arr0 = arr;
+arr = function(k) {
+  var a = _arr0(k), o = String(store["other_" + String(k).replace(/[^A-Za-z0-9_]/g, "_")] || "").trim();
+  return o ? a.concat(["\u201C" + o + "\u201D"]) : a;
+};
 function ratingHits(keys) {
   var score = 0, hits = [];
   keys.forEach(function(k) {
@@ -1164,7 +1182,28 @@ var AAM_KEY = "popsAAM_v1";
 function lvOptions(id) {
   if (id === "topHard") return topHardOptions;
   if (id === "topHelp") return topHelpOptions;
-  return checkboxOptions[id] || radioOptions[id] || [];
+  return (checkboxOptions[id] || radioOptions[id] || []).filter(function(v) {
+    return v !== "Something else";
+  });
+}
+function otherHTML(id) {
+  var oid = "other_" + String(id).replace(/[^A-Za-z0-9_]/g, "_");
+  return '<div class="other-box"><label for="' + oid + '">&#9999;&#65039; Something else? <span class="small">Write your own answer if none of these fit.</span></label><input type="text" id="' + oid + '" placeholder="Type your own answer here (optional)"></div>';
+}
+function addOtherBoxes() {
+  document.querySelectorAll("[data-check],[data-radio]").forEach(function(el) {
+    var id = el.getAttribute("data-check") || el.getAttribute("data-radio");
+    if (!document.getElementById("other_" + id)) el.insertAdjacentHTML("afterend", otherHTML(id));
+  });
+  document.querySelectorAll("[data-help] .lv-grid").forEach(function(g) {
+    var inp = g.querySelector("input[data-lv]");
+    if (!inp) return;
+    var id = inp.getAttribute("data-lv");
+    var oid = "other_" + id.replace(/[^A-Za-z0-9_]/g, "_");
+    if (!document.getElementById(oid)) g.insertAdjacentHTML("afterend", otherHTML(id));
+  });
+  var gl = document.querySelector('input[name="glasses"]');
+  if (gl && !document.getElementById("other_glasses")) gl.closest(".radio-group").insertAdjacentHTML("afterend", otherHTML("glasses"));
 }
 function pillHTML(type, id, v) {
   return '<label class="lv-pill"><input type="' + type + '" data-lv="' + esc(id) + '" value="' + esc(v) + '"><span>' + esc(v) + "</span></label>";
@@ -1199,6 +1238,7 @@ function buildLV() {
       lvChanged(inp);
     });
   });
+  addOtherBoxes();
 }
 function lvChanged(inp) {
   var id = inp.getAttribute("data-lv");
@@ -1317,6 +1357,7 @@ function restore(data) {
   });
   if (s.gateEmail) document.getElementById("gateEmail").value = s.gateEmail;
   gateCheck();
+  if (window.calcAge) window.calcAge();
   goTo(Math.min(Number(data.step) || 0, TOTAL_STEPS - 1));
 }
 function offerResume() {
@@ -1340,6 +1381,56 @@ function offerResume() {
     location.reload();
   };
 }
+(function() {
+  var dob = document.getElementById("dob"), done = document.getElementById("completionDate"), ay = document.getElementById("ageYears"), am = document.getElementById("ageMonths");
+  if (!dob || !ay || !am) return;
+  var note = document.createElement("p");
+  note.className = "small age-note";
+  note.style.marginTop = "-8px";
+  ay.closest(".field-row").insertAdjacentElement("afterend", note);
+  function parseD(v) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || "");
+    return m ? { y: +m[1], m: +m[2], d: +m[3] } : null;
+  }
+  function calc() {
+    var b = parseD(dob.value), t = parseD(done && done.value);
+    if (!t) {
+      var n = /* @__PURE__ */ new Date();
+      t = { y: n.getFullYear(), m: n.getMonth() + 1, d: n.getDate() };
+    }
+    if (!b) {
+      note.textContent = "";
+      return;
+    }
+    var y = t.y - b.y, mo = t.m - b.m;
+    if (t.d < b.d) mo--;
+    if (mo < 0) {
+      y--;
+      mo += 12;
+    }
+    if (y < 0 || y > 30) {
+      ay.value = "";
+      am.value = "";
+      store.ageYears = "";
+      store.ageMonths = "";
+      note.textContent = "Please check the date of birth \u2013 it doesn't look right.";
+      note.style.color = "#b54a4a";
+      return;
+    }
+    ay.value = String(y);
+    am.value = String(mo);
+    store.ageYears = ay.value;
+    store.ageMonths = am.value;
+    note.style.color = "";
+    note.textContent = "\u2713 Age worked out from the date of birth: " + y + " year" + (y === 1 ? "" : "s") + " and " + mo + " month" + (mo === 1 ? "" : "s") + ".";
+    if (typeof autosave === "function") autosave();
+  }
+  ["change", "input"].forEach(function(ev) {
+    dob.addEventListener(ev, calc);
+    if (done) done.addEventListener(ev, calc);
+  });
+  window.calcAge = calc;
+})();
 updateDots();
 updateProgress();
 document.getElementById("yr").textContent = (/* @__PURE__ */ new Date()).getFullYear();
@@ -1530,13 +1621,23 @@ function responsesFromPages() {
       if (q) {
         var id = q.getAttribute("data-check") || q.getAttribute("data-radio") || q.getAttribute("data-scale"), v = store[id];
         shown = Array.isArray(v) ? v.join("; ") : v !== void 0 && v !== "" ? q.hasAttribute("data-scale") ? v + " / 10" : v : "";
+        var ot = otherOf(id);
+        if (ot) shown += (shown ? "; " : "") + "Own answer: \u201C" + ot + "\u201D";
+      } else if (f.querySelector("input[type=radio]")) {
+        var nm = f.querySelector("input[type=radio]");
+        shown = store[nm.name] || "";
+        var o2 = otherOf(nm.name);
+        if (o2) shown += (shown ? "; " : "") + "Own answer: \u201C" + o2 + "\u201D";
       } else {
-        var inp = f.querySelector("textarea,input[type=text],input[type=date],input[type=number]");
+        var inp = f.querySelector("textarea,input[type=text]:not([id^=other_]),input[type=date],input[type=number]");
         if (inp) shown = val(inp.id);
         else {
           var nm = f.querySelector("input[type=radio]");
-          if (nm) shown = store[nm.name] || "";
-          else return;
+          if (nm) {
+            shown = store[nm.name] || "";
+            var o2 = otherOf(nm.name);
+            if (o2) shown += (shown ? "; " : "") + "Own answer: \u201C" + o2 + "\u201D";
+          } else return;
         }
       }
       if (!lab) return;
@@ -1595,6 +1696,24 @@ function emoData() {
 function thirdP(x) {
   x = /^I\b/.test(x) ? x : x.charAt(0).toLowerCase() + x.slice(1);
   return x.replace(/\bI'm\b/g, "they're").replace(/\bI've\b/g, "they've").replace(/\bI\b/g, "they").replace(/\bmyself\b/g, "themselves").replace(/\b[Mm]y\b/g, "their").replace(/\bme\b/g, "them");
+}
+function otherOf(k) {
+  return String(store["other_" + String(k).replace(/[^A-Za-z0-9_]/g, "_")] || "").trim();
+}
+function radioVal(k) {
+  var o = otherOf(k);
+  return (store[k] || "") + (store[k] && o ? " \u2013 " : "") + (o ? "\u201C" + o + "\u201D" : "");
+}
+function ownAnswersHTML() {
+  var rows = [];
+  document.querySelectorAll(".other-box input").forEach(function(inp) {
+    var v = val(inp.id);
+    if (!v) return;
+    var f = inp.closest(".field"), lab = f ? f.querySelector(".field-label") : null;
+    var grid = inp.closest(".field") && inp.parentElement.previousElementSibling;
+    rows.push("<tr><th>" + esc(lab ? lab.textContent.replace(/^⭐\s*/, "") : "Question") + "</th><td>\u201C" + esc(v) + "\u201D</td></tr>");
+  });
+  return rows.length ? "<h4>Answers in " + esc(firstName()) + '\u2019s own words (\u201Csomething else\u201D)</h4><table class="rp-resp">' + rows.join("") + "</table>" : "";
 }
 function lcFirst(x) {
   return /^I\b/.test(x) ? x : x.charAt(0).toLowerCase() + x.slice(1);
@@ -1749,7 +1868,7 @@ function buildReportHTML() {
   if (val("dreamJob")) draft.push("When I am older I would like to: \u201C" + val("dreamJob") + "\u201D.");
   var views = '<div class="rp-sgrid">' + blk("\u{1F60A} What I enjoy and am interested in", none(arr("calmThings")).concat(likes.map(function(x) {
     return "Likes " + x;
-  })).concat(val("readingType") ? ["Reads: " + val("readingType")] : []).concat(val("pets") ? ["Pets: " + val("pets")] : []), true) + blk("\u{1F4AA} What I am good at", goodAt.concat(quals), true) + blk("\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1} People who help me", none(arr("trustedAdults")), true) + blk("\u{1F61F} What I find hard", arr("topHard").concat(none(arr("worstMoments")).slice(0, 6))) + blk("\u{1F91D} What helps me", helpsMe, true) + blk("\u{1F4AC} What I want adults to understand", none(arr("importantThings"))) + "</div>" + qt("Fun, hobbies, clubs or sport", "hobbies") + qt("People who are important to me and how they help", "importantPeople") + qt("What I find easy and enjoy at school", "easyAtSchool") + qt("What I find difficult at school", "difficultAtSchool") + qt("How I like adults to talk to me", "talkStyle") + qt("What I would like to do for a job one day", "dreamJob") + qt("Anything else I want adults to know", "anythingElse") + qt("Questions I would like to ask", "questions") + (draft.length ? '<h4>Draft wording for the Child\u2019s Views section</h4><p class="rp-small">Built only from ' + esc(n) + "\u2019s own answers. Please check it with " + esc(n) + ' before using it.</p><div class="rp-summary"><p>' + esc(draft.join(" ")) + "</p></div>" : "");
+  })).concat(val("readingType") ? ["Reads: " + val("readingType")] : []).concat(val("pets") ? ["Pets: " + val("pets")] : []), true) + blk("\u{1F4AA} What I am good at", goodAt.concat(quals), true) + blk("\u{1F9D1}\u200D\u{1F91D}\u200D\u{1F9D1} People who help me", none(arr("trustedAdults")), true) + blk("\u{1F61F} What I find hard", arr("topHard").concat(none(arr("worstMoments")).slice(0, 6))) + blk("\u{1F91D} What helps me", helpsMe, true) + blk("\u{1F4AC} What I want adults to understand", none(arr("importantThings"))) + "</div>" + ownAnswersHTML() + qt("Fun, hobbies, clubs or sport", "hobbies") + qt("People who are important to me and how they help", "importantPeople") + qt("What I find easy and enjoy at school", "easyAtSchool") + qt("What I find difficult at school", "difficultAtSchool") + qt("How I like adults to talk to me", "talkStyle") + qt("What I would like to do for a job one day", "dreamJob") + qt("Anything else I want adults to know", "anythingElse") + qt("Questions I would like to ask", "questions") + (draft.length ? '<h4>Draft wording for the Child\u2019s Views section</h4><p class="rp-small">Built only from ' + esc(n) + "\u2019s own answers. Please check it with " + esc(n) + ' before using it.</p><div class="rp-summary"><p>' + esc(draft.join(" ")) + "</p></div>" : "");
   var limitedNote = function(items) {
     var l = items.filter(function(it) {
       return lvlOf(it) === "limited";
@@ -1775,7 +1894,7 @@ function buildReportHTML() {
       return ratingCard(x.a, x.d, n, extra);
     }
     if (it[0] === "e") {
-      var fc = '<p class="rp-small">Knows what they feel: ' + esc(store.feelIdentify || "not answered") + " \xB7 Names feelings: " + esc(store.feelName || "not answered") + " \xB7 Explains why: " + esc(store.feelWhy || "not answered") + " \xB7 Knows what to do: " + esc(store.feelKnowWhat || "not answered") + "</p>";
+      var fc = '<p class="rp-small">Knows what they feel: ' + esc(radioVal("feelIdentify") || "not answered") + " \xB7 Names feelings: " + esc(radioVal("feelName") || "not answered") + " \xB7 Explains why: " + esc(radioVal("feelWhy") || "not answered") + " \xB7 Knows what to do: " + esc(radioVal("feelKnowWhat") || "not answered") + "</p>";
       return lvCard(EMO_NAME, emo, EMO_INFO, n, fc) + '<div class="rp-sgrid">' + blk("\u{1F623} Upset or frustrated by", none(arr("upsetTriggers"))) + blk("\u{1F620} Angry when", none(arr("angryTriggers"))) + blk("\u{1F622} Sad when", none(arr("sadTriggers"))) + blk("\u{1F628} Worried or scared by", none(arr("scaredTriggers"))) + "</div>";
     }
     if (it[0] === "l") {
@@ -1783,8 +1902,8 @@ function buildReportHTML() {
       return lvCard(it[1], fd[it[1]], DOMAIN_INFO[it[1]], n, ctx);
     }
     var c = "";
-    if (it[1].indexOf("Attention") === 0) c = '<p class="rp-small">Where it happens: ' + esc(store.focusWhere || "not answered") + " \xB7 How long: " + esc(store.focusSince || "not answered") + "</p>";
-    if (it[1].indexOf("Social") === 0) c = '<p class="rp-small">After school: ' + esc(store.afterSchool || "not answered") + "</p>";
+    if (it[1].indexOf("Attention") === 0) c = '<p class="rp-small">Where it happens: ' + esc(radioVal("focusWhere") || "not answered") + " \xB7 How long: " + esc(radioVal("focusSince") || "not answered") + "</p>";
+    if (it[1].indexOf("Social") === 0) c = '<p class="rp-small">After school: ' + esc(radioVal("afterSchool") || "not answered") + "</p>";
     if (it[1].indexOf("Worry") === 0) c = '<p class="rp-small">How much of the time worried: ' + (store.generalWorry !== void 0 ? store.generalWorry + "/10" : "not answered") + " \xB7 Worry about learning: " + (store.learningAnxiety !== void 0 ? store.learningAnxiety + "/10" : "not answered") + "</p>";
     return lvCard(it[1], wd[it[1]], WIDER_INFO[it[1]], n, c);
   }
@@ -1839,7 +1958,7 @@ function buildReportHTML() {
   }).map(cardFor).join("") + "<h4>School subjects</h4><p>" + esc(N) + ' rated each subject from 1 to 10 for how good they feel they are at it and how much they like it. \u201CNot set\u201D means the slider was left at its starting point.</p><table class="rp-table"><tr><th>Subject</th><th>Good at it</th><th>Likes it</th><th>Because\u2026</th></tr>' + subjRows + "</table>" + (harder.length ? "<p>Subjects " + esc(n) + " feels least confident in (3 or less): " + esc(joinNice(harder)) + ".</p>" : "");
   var secSE = '<h2>6. Social, Emotional and Mental Health</h2><p>Attention and activity, worry and anxiety, feelings about learning, avoidance, accepting help and self-belief.</p><div class="rp-glance">' + glance + "</div>" + strengthsLine(seStr, seHelp, EHC[2].items) + '<p class="rp-note"><strong>Please read:</strong> the attention (ADHD-type), social communication (autism-type) and anxiety sections are screening indicators from the pupil\u2019s own view. They cannot identify or rule out ADHD, autism or an anxiety disorder, which need a specialist assessment drawing on developmental history and information from several settings. Features also overlap: restlessness and poor focus can come from anxiety or from work that is too hard, and withdrawal can come from embarrassment.</p>' + sortItems(EHC[2].items).filter(function(it) {
     return lvlOf(it) !== "limited";
-  }).map(cardFor).join("") + "<h4>The avoidance cycle</h4><p>" + esc(cycle) + '</p><div class="rp-sgrid">' + blk("What " + esc(n) + " does when it feels too hard", arr("avoidResponses")) + blk("Why", arr("avoidWhy")) + blk("Early warning signs", none(arr("earlyWarning"))) + blk("Thoughts that go through their head", none(arr("worryThoughts"))) + '</div><p class="rp-small">Asking for help: ' + esc(store.helpFeel || "not answered") + " \xB7 Learning 1:1: " + esc(store.oneToOne || "not answered") + "</p>";
+  }).map(cardFor).join("") + "<h4>The avoidance cycle</h4><p>" + esc(cycle) + '</p><div class="rp-sgrid">' + blk("What " + esc(n) + " does when it feels too hard", arr("avoidResponses")) + blk("Why", arr("avoidWhy")) + blk("Early warning signs", none(arr("earlyWarning"))) + blk("Thoughts that go through their head", none(arr("worryThoughts"))) + '</div><p class="rp-small">Asking for help: ' + esc(radioVal("helpFeel") || "not answered") + " \xB7 Learning 1:1: " + esc(radioVal("oneToOne") || "not answered") + "</p>";
   var dq = AD["daily-qs"];
   var spStr = none(arr("independentGood")).map(function(x) {
     return "Does well independently: " + thirdP(x);
@@ -1970,15 +2089,12 @@ function sendAutomatically(email) {
   };
   var opts = { method: "POST", body: JSON.stringify(payload), headers: { "Content-Type": "text/plain;charset=utf-8" } };
   return fetch(SEND_ENDPOINT, opts).then(function(r) {
+    if (!r.ok) throw new Error("the sending service replied with error " + r.status);
     return r.json();
   }).then(function(j) {
-    return { ok: !!(j && j.ok), copy: !!(j && j.copySent) };
-  }).catch(function() {
-    return fetch(SEND_ENDPOINT, { method: "POST", body: opts.body, headers: opts.headers, mode: "no-cors" }).then(function() {
-      return { ok: true, copy: null };
-    }).catch(function() {
-      return { ok: false };
-    });
+    return { ok: !!(j && j.ok), copy: !!(j && j.copySent), reason: j && j.message || "no confirmation received" };
+  }).catch(function(e) {
+    return { ok: false, reason: e && /error \d+/.test(e.message || "") ? e.message : "the sending service could not be reached" };
   });
 }
 function sendViaEmailApp(email) {
@@ -1998,6 +2114,17 @@ function sendViaEmailApp(email) {
     leaving = false;
   }, 1500);
   showStatus("<strong>Your email is ready.</strong> It is going to " + EP_EMAIL + (email ? ", with a copy to you" : "") + '. Just press <strong>Send</strong>.<br><span class="small">If you can, also attach the report file that has just downloaded.</span>');
+}
+function checkSender(reason) {
+  return fetch(SEND_ENDPOINT, { method: "GET" }).then(function(r) {
+    return r.text();
+  }).then(function(t) {
+    if (/All About Me/.test(t)) return "The sender is running the latest version, so the problem happened inside it (for example Gmail permissions or the daily email limit). In Apps Script, open <strong>Executions</strong> to see the exact error, and run any function once to re-approve permissions.";
+    if (/sender is running/i.test(t)) return "The sender is running an <strong>older version</strong> that does not recognise All About Me. In Apps Script paste in the latest code, then Deploy \u2192 Manage deployments \u2192 \u270F\uFE0F \u2192 Version: <strong>New version</strong> \u2192 Deploy.";
+    return "The sender replied with a Google page instead of a confirmation. It probably needs permission: in Manage deployments set <strong>Execute as: Me</strong> and <strong>Who has access: Anyone</strong>, deploy a new version, and approve the permissions Google asks for.";
+  }).catch(function() {
+    return "The sender could not be reached from this device. Check the web address in the questionnaire matches the one in Deploy \u2192 Manage deployments, that <strong>Who has access</strong> is <strong>Anyone</strong>, and that this device is online (some school networks block Google Apps Script).";
+  });
 }
 var leaving = false;
 function sendToEP() {
@@ -2030,6 +2157,12 @@ function sendToEP() {
       btn.disabled = false;
       btn.textContent = "\u{1F4E8} Send to the Educational Psychologist";
       sendViaEmailApp(email);
+      var stEl = document.getElementById("sendStatus");
+      stEl.innerHTML += '<br><span class="small">Automatic sending did not work this time, so your email app has opened instead.</span><details class="diag"><summary>Information for the Educational Psychologist</summary><p id="diagText">Reason: ' + esc(r.reason || "unknown") + ". Checking the sender\u2026</p></details>";
+      checkSender(r.reason).then(function(t) {
+        var d = document.getElementById("diagText");
+        if (d) d.innerHTML = "Reason: " + esc(r.reason || "unknown") + ".<br>" + t;
+      });
     }
   });
 }
